@@ -10,7 +10,6 @@
             runs-on: ubuntu-latest
             steps:
               - uses: actions/checkout@v2
-              # Setup key 1
               - run: set -eu
               - run: mkdir "$HOME/.ssh"
               - run: echo "${{ secrets.key }}" > "$HOME/.ssh/key"
