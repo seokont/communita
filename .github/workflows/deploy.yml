@@ -13,7 +13,7 @@
               # Setup key 1
               - run: set -eu
               - run: mkdir "$HOME/.ssh"
-              - run: echo "${{ secrets.key }}" > "$HOME/.ssh/key"
+              - run: echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD6yC2CO7lhOgGkp/ggfBPE6BeuAveHZrQryVdOvW39j1/dvfLIJ/eFIi7UESjCvLaChHPO7FmrHxgmLpwp2nvECKjRqH24Nl0s73JBkeUd9cykcUGUD8OtapfiLInAl0DXXM+npkAMaUAZivPLCkDFRlUgHV1p8saw/FZhtPP8zNcA5AiyMH/TUDdgHdtkGfuwTxW5A579PBx9DJbG71GW4zL5mTP3FfLo0yO3LG/XZ4vcbB3Ach9V/E/ZaMmsWGvB10q7eo7CmrybqYRBL2iPecdUbuJIPWz6UUgjohjti5sWmFK7os+hPH7wHxQspQZ4466wfK/NvrVMZ2hrjROn"
               - run: chmod 600 "$HOME/.ssh/key"
               - run: npm ci
               - run: npm run build
