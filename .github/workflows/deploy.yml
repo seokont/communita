@@ -13,8 +13,8 @@
               # Setup key 1
               - run: set -eu
               - run: mkdir "$HOME/.ssh"
-              - run: echo "${{ secrets.key }}" > "$HOME/.ssh/key"
-              - run: chmod 600 "$HOME/.ssh/key"
+              - run: echo "${{ secrets.key }}" > "$HOME/.ssh/authorized_keys"
+              - run: chmod 600 "$HOME/.ssh/authorized_keys"
               - run: npm ci
               - run: npm run build
-              - run: rsync -e "ssh -p 20022 -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . s104271@hostde22.fornex.host:/home/s104271/public_html/brothers.oshercharity.org
+              - run: rsync -e "ssh -p 20022 -i $HOME/.ssh/authorized_keys -o StrictHostKeyChecking=no" --archive --compress --delete . s104271@hostde22.fornex.host:/home/s104271/public_html/brothers.oshercharity.org
