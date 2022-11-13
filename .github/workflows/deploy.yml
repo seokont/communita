@@ -16,4 +16,4 @@
               - run: chmod 600 "$HOME/.ssh/key"
               - run: npm ci
               - run: npm run build
-              - run: rsync -avvvz -e "ssh -2 -p 20022 -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . s104271@hostde22.fornex.host:/home/s104271/public_html/brothers.oshercharity.org
+              - run: rsync -e "ssh -p 20022 -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . s104271@hostde22.fornex.host:/home/s104271/public_html/brothers.oshercharity.org
