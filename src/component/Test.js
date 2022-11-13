@@ -12,7 +12,7 @@ const TestPage = () => {
         }
         return [count, increment, decrement]
     }
-    const [count, increment, decrement] = useCounter(val, 4000)
+    const [count, increment, decrement] = useCounter(val, 7000)
     return (
         <>
             <button onClick={increment}> +++</button>
