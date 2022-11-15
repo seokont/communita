@@ -57,9 +57,9 @@ const SizeDropdown = (props) => (
         <Link to="/communita/presvitery">
             <Dropdown.Item>Пресвітери</Dropdown.Item>
         </Link>
-        <Link to="/communita/testpage">
-            <Dropdown.Item>222</Dropdown.Item>
-        </Link>
+        {/*<Link to="/communita/testpage">*/}
+        {/*    <Dropdown.Item>222</Dropdown.Item>*/}
+        {/*</Link>*/}
     </Dropdown>
 );
 export default function App() {
