@@ -7,16 +7,15 @@ import reportWebVitals from "./reportWebVitals";
 import ruRU from "rsuite/locales/ru_RU";
 import { CustomProvider } from "rsuite";
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-    <React.StrictMode>
-        <BrowserRouter>
-            <CustomProvider locale={ruRU}>
-                <App />
-            </CustomProvider>
-        </BrowserRouter>
-    </React.StrictMode>
+  <React.StrictMode>
+    <BrowserRouter>
+      <CustomProvider locale={ruRU}>
+        <App />
+      </CustomProvider>
+    </BrowserRouter>
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
