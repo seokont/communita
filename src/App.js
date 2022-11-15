@@ -19,27 +19,9 @@ import {
     Whisper,
 } from "rsuite";
 import Responsible from "./component/Responsible";
-import Box from "@mui/material/Box";
-import BottomNavigation from "@mui/material/BottomNavigation";
-import BottomNavigationAction from "@mui/material/BottomNavigationAction";
-import RestoreIcon from "@mui/icons-material/Restore";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
-import Home from "./component/Home";
 import Presvitery from "./component/Presvitery";
 import MyCalendar from "./component/Calendar";
-import Stack from "@mui/material/Stack";
-// import Button from "@mui/material/Button";
-import ClickAwayListener from "@mui/material/ClickAwayListener";
-import Grow from "@mui/material/Grow";
-import Paper from "@mui/material/Paper";
-import Popper from "@mui/material/Popper";
-import MenuItem from "@mui/material/MenuItem";
-import MenuList from "@mui/material/MenuList";
-import Alert from "@mui/material/Alert";
-import AlertTitle from "@mui/material/AlertTitle";
-import Menu from "@mui/material/Menu";
-import {denBrit} from "../src/storage/baza";
+import {denBrit} from "./storage/baza";
 import ka from "./component/4018986.png";
 import TestPage from "./component/Test";
 
@@ -73,6 +55,7 @@ export default function App() {
     let years = d.getFullYear();
     useEffect(() => {
         const millionDN = denBrit?.filter((u) => {
+            console.log('1111', date)
             let k = u.data.split(".");
             return (
                 k !== "" &&

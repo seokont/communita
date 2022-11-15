@@ -1,19 +1,19 @@
-        name: Deploy
-
-        on:
-          push:
-            branches:
-              - main
-
-        jobs:
-          deploy:
-            runs-on: ubuntu-latest
-            steps:
-              - uses: actions/checkout@v2
-              - run: set -eu
-              - run: mkdir "$HOME/.ssh"
-              - run: echo "${{ secrets.key }}" > "$HOME/.ssh/key"
-              - run: chmod 600 "$HOME/.ssh/key"
-              - run: npm ci
-              - run: npm run build
-              - run: rsync -e "ssh -p 20022 -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . s104271@hostde22.fornex.host:/home/s104271/public_html/brothers.oshercharity.org
+#        name: Deploy
+#
+#        on:
+#          push:
+#            branches:
+#              - main
+#
+#        jobs:
+#          deploy:
+#            runs-on: ubuntu-latest
+#            steps:
+#              - uses: actions/checkout@v2
+#              - run: set -eu
+#              - run: mkdir "$HOME/.ssh"
+#              - run: echo "${{ secrets.key }}" > "$HOME/.ssh/key"
+#              - run: chmod 600 "$HOME/.ssh/key"
+#              - run: npm ci
+#              - run: npm run build
+#              - run: rsync -e "ssh -p 20022 -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . s104271@hostde22.fornex.host:/home/s104271/public_html/brothers.oshercharity.org
