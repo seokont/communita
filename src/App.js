@@ -45,19 +45,19 @@ import TestPage from "./component/Test";
 
 const SizeDropdown = (props) => (
     <Dropdown appearance="default" {...props}>
-        <Link to="/">
+        <Link to="/communita/">
             <Dropdown.Item>Список</Dropdown.Item>
         </Link>
-        <Link to="/calendar">
+        <Link to="/communita/calendar">
             <Dropdown.Item>Графік приготувань</Dropdown.Item>
         </Link>
-        <Link to="/responsible">
+        <Link to="/communita/responsible">
             <Dropdown.Item>Відповідальні груп</Dropdown.Item>
         </Link>
-        <Link to="/presvitery">
+        <Link to="/communita/presvitery">
             <Dropdown.Item>Пресвітери</Dropdown.Item>
         </Link>
-        <Link to="/testpage">
+        <Link to="/communita/testpage">
             <Dropdown.Item>222</Dropdown.Item>
         </Link>
     </Dropdown>
@@ -234,11 +234,11 @@ export default function App() {
                 </ButtonToolbar>
             </div>
             <Routes>
-                <Route path="/" element={<TableBrothers/>}/>
-                <Route path="/responsible" element={<Responsible/>}/>
-                <Route path="/presvitery" element={<Presvitery/>}/>
-                <Route path="/calendar" element={<MyCalendar/>}/>
-                <Route path="/testpage" element={<TestPage/>}/>
+                <Route path="/communita/" element={<TableBrothers/>}/>
+                <Route path="/communita/responsible" element={<Responsible/>}/>
+                <Route path="/communita/presvitery" element={<Presvitery/>}/>
+                <Route path="/communita/calendar" element={<MyCalendar/>}/>
+                <Route path="/communita/testpage" element={<TestPage/>}/>
             </Routes>
         </div>
     );
