@@ -237,11 +237,11 @@ export default function App() {
       </div>
       <Routes>
         {/* <Route path="/" element={<Home />} /> */}
-        <Route path="responsible" element={<Responsible />} />
-        <Route path="/" exact element={<TableBrothers />} />
-        <Route path="presvitery" element={<Presvitery />} />
-        <Route path="calendar" element={<MyCalendar />} />
-        <Route path="testpage" element={<TestPage />} />
+        <Route path="/responsible" element={<Responsible />} />
+        <Route path="/" element={<TableBrothers />} />
+        <Route path="/presvitery" element={<Presvitery />} />
+        <Route path="/calendar" element={<MyCalendar />} />
+        <Route path="/testpage" element={<TestPage />} />
       </Routes>
     </div>
   );
