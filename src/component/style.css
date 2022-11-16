@@ -1,10 +1,10 @@
 .input-live-search {
-  width: 80%;
+  width: 70%;
   height: 40px;
-  margin: 10px 7px 10px 7px;
+  margin: 10px 7px 10px 0px;
   padding: 0 12px;
 }
 
 .no-active {
-  background-color:WhiteSmoke;
+  background-color: WhiteSmoke;
 }
